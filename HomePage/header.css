@@ -1,0 +1,69 @@
+.app-header {
+    background-color: #0074D9;
+    color: #FFF;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-right: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .navigation ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #0074D9;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navigation ul.active {
+        display: flex;
+    }
+
+    .navigation ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
