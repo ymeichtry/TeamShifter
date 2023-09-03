@@ -3,7 +3,11 @@
     color: #FFF;
     padding: 10px 0;
     text-align: center;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -15,6 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0; /* Padding auf 0 setzen */
 }
 
 .menu-toggle {

@@ -18,3 +18,10 @@ body {
 .btn:hover {
     background-color: #0056b3;
 }
+
+.header-iframe {
+    width: 100%;
+    border: none;
+    margin: 0; 
+    padding: 0; 
+}
