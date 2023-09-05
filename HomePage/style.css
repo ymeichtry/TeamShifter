@@ -7,22 +7,30 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  height: 50px;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0074D9;
-    color: #FFF;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0074d9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
