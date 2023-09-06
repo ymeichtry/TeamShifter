@@ -12,26 +12,36 @@ iframe {
   width: 100%;
 }
 
-.player-list li {
-  margin-bottom: 10px;
+main {
+    margin: 2%;
 }
 
-.player-list input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-@media screen and (max-width: 768px) {
+.player-list {
+    list-style: none;
+    padding: 0;
+    width: 92%;
+  }
+  
   .player-list li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
-
+  
   .player-list input[type="text"] {
-    padding: 8px;
-    font-size: 14px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
   }
-}
-
+  
+  @media screen and (max-width: 768px) {
+    .player-list li {
+      margin-bottom: 5px;
+    }
+  
+    .player-list input[type="text"] {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+  
