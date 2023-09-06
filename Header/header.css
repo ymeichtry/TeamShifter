@@ -1,14 +1,15 @@
 body {
-    height: 50%;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
+
 .app-header {
     background-color: #0074D9;
     color: #FFF;
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
@@ -20,5 +21,17 @@ body {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-left: 24px;
+}
+
+.home-link {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 24px;
+    margin-left: 3%;
+}
+
+.home-link:hover {
+    text-decoration: underline;
 }
