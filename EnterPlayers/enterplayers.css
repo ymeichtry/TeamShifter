@@ -20,6 +20,7 @@ main {
     list-style: none;
     padding: 0;
     width: 92%;
+    margin-left: 2%;
   }
   
   .player-list li {
@@ -45,3 +46,24 @@ main {
     }
   }
   
+.add-del-player-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.add-del-player-btn button {
+  background-color: #0056b3;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 30%;
+}
+
+.add-del-player-btn button:hover {
+  background-color: #004080;
+}
