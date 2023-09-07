@@ -1,15 +1,36 @@
-// Create an empty array to store player names.
-let playerList = [];
+// This function runs only when the DOM is fully loaded.
+document.addEventListener("DOMContentLoaded", function () {
 
-// Assuming you have a button with the ID "saveButton" in your HTML.
-document.getElementById("savePlayerButton").addEventListener("click", function () {
-    // Iterate through the input fields for players from 1 to 10.
-    for (let i = 1; i <= 10; i++) {
-        let playerName = document.querySelector(`#player${i}`).value;
-        playerList.push(playerName);
-    }
+    // JavaScript function to add another input field
+    document.getElementById("addPlayerInput").addEventListener("click", function () {
+        console.log("plus input"); // Log message
 
-    console.log("These are the players:")
-    // Log the playerList array to the console.
-    console.log(playerList);
+        const playerList = document.getElementById("playerList");
+
+        // Create a new list item and an input field
+        const listItem = document.createElement("li");
+        const input = document.createElement("input");
+
+        // Set properties of the input field
+        input.type = "text";
+        input.placeholder = "Player " + (playerList.childElementCount + 1);
+
+        // Add the input field to the list item and the list item to the player list
+        listItem.appendChild(input);
+        playerList.appendChild(listItem);
+    });
+
+    // JavaScript function to remove an input field
+    document.getElementById("deletePlayerInput").addEventListener("click", function () {
+        console.log("minus input"); // Log message
+
+        const playerList = document.getElementById("playerList");
+        const lastItem = playerList.lastElementChild;
+
+        // Check if there is at least one input field before removing one
+        if (playerList.childElementCount > 1) {
+            playerList.removeChild(lastItem);
+        }
+    });
 });
+
