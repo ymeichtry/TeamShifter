@@ -34,3 +34,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Funktion zum Weiterleiten an die nächste Seite
+document.getElementById("nextButton").addEventListener("click", function () {
+    // Holen Sie sich die eingegebenen Spieler und konvertieren Sie sie in ein Array
+    const players = [];
+    for (let i = 1; i <= 10; i++) {
+        const playerName = document.querySelector(`#player${i}`).value;
+        if (playerName.trim() !== '') {
+            players.push(playerName);
+        }
+    }
+
+    // Konvertieren Sie das Array in einen JSON-String
+    const playersJSON = JSON.stringify(players);
+
+    // Speichern Sie den JSON-String im versteckten Feld
+    document.getElementById("playerList").value = playersJSON;
+
+    // Navigieren Sie zur nächsten Seite
+    window.location.href = "../ShiftOverview/shiftoverview.html";
+});
