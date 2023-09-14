@@ -1,17 +1,17 @@
-// JavaScript-Funktion zum Laden der Spielerdaten aus dem Local Storage
+// JavaScript function to load player data from Local Storage
 function loadPlayerData() {
     const playerData = JSON.parse(localStorage.getItem('playerData'));
-    return playerData || []; // Rückgabe der gespeicherten Daten oder eines leeren Arrays
+    return playerData || []; // Return the stored data or an empty array
 }
 
 document.addEventListener("DOMContentLoaded", function () {
     const shiftsContainer = document.getElementById("shiftsContainer");
-    const playerData = loadPlayerData(); // Laden der Spielerdaten
-    const playersPerShift = 3; // Hier die Anzahl der Spieler pro Schicht einstellen
+    const playerData = loadPlayerData(); // Load player data
+    const playersPerShift = 3; // Set the number of players per shift here
 
-    // Funktion zum Generieren der Schichten
+    // Function to generate shifts
     function generateShifts() {
-        shiftsContainer.innerHTML = ''; // Löschen Sie den Inhalt des Containers
+        shiftsContainer.innerHTML = ''; // Clear the content of the container
 
         for (let i = 0; i < playerData.length; i += playersPerShift) {
             const shift = document.createElement("div");
@@ -27,6 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Rufen Sie die Funktion auf, um die Schichten zu generieren
+    // Call the function to generate shifts
     generateShifts();
 });

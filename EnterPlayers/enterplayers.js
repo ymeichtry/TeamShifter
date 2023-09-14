@@ -1,52 +1,52 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Funktion zum Speichern der Spielerdaten
+    // Function to save player data
     function savePlayerData() {
         const playerData = [];
         const playerListItems = document.querySelectorAll(".player-list input");
 
         playerListItems.forEach(function (item) {
-            if (item.value.trim() !== '') { // Überprüfe, ob das Feld nicht leer ist
+            if (item.value.trim() !== '') { // Check if the field is not empty
                 playerData.push(item.value);
             }
         });
 
-        // Speichere die Spielerdaten im Local Storage
+        // Save player data in Local Storage
         localStorage.setItem('playerData', JSON.stringify(playerData));
     }
 
-    // Event-Listener für den "Next ->" Link
+    // Event listener for the "Next ->" link
     document.getElementById("nextButton").addEventListener("click", function () {
         savePlayerData();
         window.location.href = "../ShiftOverview/shiftoverview.html";
     });
 
-    // JavaScript-Funktion, um ein weiteres Input-Feld hinzuzufügen
+    // JavaScript function to add another input field
     document.getElementById("addPlayerInput").addEventListener("click", function () {
-        console.log("plus input"); // Log-Meldung
+        console.log("plus input"); // Log message
 
         const playerList = document.getElementById("playerList");
 
-        // Erstellen Sie ein neues Listenelement und ein Input-Feld
+        // Create a new list item and an input field
         const listItem = document.createElement("li");
         const input = document.createElement("input");
 
-        // Setzen Sie die Eigenschaften des Input-Felds
+        // Set properties of the input field
         input.type = "text";
         input.placeholder = "Player " + (playerList.childElementCount + 1);
 
-        // Fügen Sie das Input-Feld dem Listenelement hinzu und das Listenelement der Spielerliste
+        // Add the input field to the list item and the list item to the player list
         listItem.appendChild(input);
         playerList.appendChild(listItem);
     });
 
-    // JavaScript-Funktion, um ein Input-Feld zu entfernen
+    // JavaScript function to remove an input field
     document.getElementById("deletePlayerInput").addEventListener("click", function () {
-        console.log("minus input"); // Log-Meldung
+        console.log("minus input"); // Log message
 
         const playerList = document.getElementById("playerList");
         const lastItem = playerList.lastElementChild;
 
-        // Überprüfen Sie, ob es noch mindestens ein Input-Feld gibt, bevor Sie eins entfernen
+        // Check if there is at least one input field before removing one
         if (playerList.childElementCount > 1) {
             playerList.removeChild(lastItem);
         }
