@@ -6,27 +6,31 @@ function loadPlayerData() {
 
 document.addEventListener("DOMContentLoaded", function () {
     const shiftsContainer = document.getElementById("shiftsContainer");
-    const playerData = loadPlayerData(); // Load player data
+    let playerData = loadPlayerData(); // Load player data
     const playersPerShift = 3; // Set the number of players per shift here
+    let currentShiftIndex = 0; // Track the current shift index
+    let shiftCount; // Define shiftCount here
 
     // Function to generate shifts
     function generateShifts() {
         shiftsContainer.innerHTML = ''; // Clear the content of the container
 
-        for (let i = 0; i < playerData.length; i += playersPerShift) {
-            const shift = document.createElement("div");
-            shift.classList.add("shift");
+        shiftCount = Math.ceil(playerData.length / playersPerShift); // Calculate shiftCount here
+        const currentShiftData = playerData.slice(currentShiftIndex * playersPerShift, (currentShiftIndex + 1) * playersPerShift);
 
-            for (let j = i; j < i + playersPerShift && j < playerData.length; j++) {
-                const player = document.createElement("p");
-                player.textContent = `${j + 1}. ${playerData[j]}`;
-                shift.appendChild(player);
-            }
-
-            shiftsContainer.appendChild(shift);
+        for (let j = 0; j < playersPerShift; j++) {
+            const player = document.createElement("p");
+            player.textContent = `${j + 1}. ${currentShiftData[j] || ''}`;
+            shiftsContainer.appendChild(player);
         }
     }
 
-    // Call the function to generate shifts
+    // Call the function to generate shifts initially
     generateShifts();
+
+    // Event listener for the "Next Shift" button
+    document.getElementById("nextShiftButton").addEventListener("click", function () {
+        currentShiftIndex = (currentShiftIndex + 1) % shiftCount; // Increment the shift index and wrap around
+        generateShifts(); // Regenerate shifts
+    });
 });
