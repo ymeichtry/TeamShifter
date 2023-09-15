@@ -14,9 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem('playerData', JSON.stringify(playerData));
     }
 
-    // Event listener for the "Next ->" link
+    // Event listener for the "Next Shift" button
     document.getElementById("nextButton").addEventListener("click", function () {
         savePlayerData();
+        const playersPerShift = parseInt(document.getElementById("playersPerShiftInput").value, 10);
+        localStorage.setItem('playersPerShift', playersPerShift); // Save playersPerShift value
         window.location.href = "../ShiftOverview/shiftoverview.html";
     });
 
