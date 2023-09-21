@@ -1,18 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Funktion zum Speichern der Spielerdaten
-    function savePlayerData() {
-        const playerData = [];
-        const playerListItems = document.querySelectorAll(".player-list input");
+// JavaScript-Funktion zum Speichern der Spielerdaten
+function savePlayerData() {
+    const playerData = [];
+    const playerListItems = document.querySelectorAll(".player-list input");
 
-        playerListItems.forEach(function (item) {
-            if (item.value.trim() !== '') { // Überprüfe, ob das Feld nicht leer ist
-                playerData.push(item.value);
-            }
-        });
+    playerListItems.forEach(function (item) {
+        if (item.value.trim() !== '') { // Überprüfe, ob das Feld nicht leer ist
+            playerData.push(item.value);
+        }
+    });
 
-        // Speichere die Spielerdaten im Local Storage
-        localStorage.setItem('playerData', JSON.stringify(playerData));
-    }
+    console.log("Spielerdaten vor dem Speichern:", playerData); // Hier hinzugefügt
+
+    // Speichere die Spielerdaten im Local Storage
+    localStorage.setItem('playerData', JSON.stringify(playerData));
+
+    console.log("Spielerdaten nach dem Speichern:", JSON.parse(localStorage.getItem('playerData'))); // Hier hinzugefügt
+}
 
     // Event-Listener für den "Next ->" Link
     document.getElementById("nextButton").addEventListener("click", function () {
