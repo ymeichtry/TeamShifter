@@ -1,22 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-// JavaScript-Funktion zum Speichern der Spielerdaten
-function savePlayerData() {
-    const playerData = [];
-    const playerListItems = document.querySelectorAll(".player-list input");
+    // JavaScript-Funktion zum Speichern der Spielerdaten
+    function savePlayerData() {
+        const playerData = [];
+        const playerListItems = document.querySelectorAll(".player-list input");
 
-    playerListItems.forEach(function (item) {
-        if (item.value.trim() !== '') { // Überprüfe, ob das Feld nicht leer ist
-            playerData.push(item.value);
-        }
-    });
+        playerListItems.forEach(function (item) {
+            if (item.value.trim() !== '') { // Überprüfe, ob das Feld nicht leer ist
+                playerData.push(item.value);
+            }
+        });
 
-    console.log("Spielerdaten vor dem Speichern:", playerData); // Hier hinzugefügt
+        console.log("Spielerdaten vor dem Speichern:", playerData); // Hier hinzugefügt
 
-    // Speichere die Spielerdaten im Local Storage
-    localStorage.setItem('playerData', JSON.stringify(playerData));
+        // Speichere die Spielerdaten im Local Storage
+        localStorage.setItem('playerData', JSON.stringify(playerData));
 
-    console.log("Spielerdaten nach dem Speichern:", JSON.parse(localStorage.getItem('playerData'))); // Hier hinzugefügt
-}
+        console.log("Spielerdaten nach dem Speichern:", JSON.parse(localStorage.getItem('playerData'))); // Hier hinzugefügt
+    }
 
     // Event-Listener für den "Next ->" Link
     document.getElementById("nextButton").addEventListener("click", function () {
@@ -54,5 +54,19 @@ function savePlayerData() {
         if (playerList.childElementCount > 1) {
             playerList.removeChild(lastItem);
         }
+    });
+
+    // JavaScript-Funktion zum Festlegen der Anzahl der Spieler pro Schicht
+    function setPlayersPerShift(value) {
+        localStorage.setItem('playersPerShift', value);
+    }
+
+    // Event-Listener für die Schaltflächen "3" und "4" Spieler pro Schicht
+    document.getElementById("button3").addEventListener("click", function () {
+        setPlayersPerShift(3);
+    });
+
+    document.getElementById("button4").addEventListener("click", function () {
+        setPlayersPerShift(4);
     });
 });

@@ -33,10 +33,13 @@
 
             <div class="players-per-shift">
                 <label for="playersPerShift">Players per Shift:</label>
-                <input type="number" id="playersPerShift" placeholder="Number of players" />
-            </div>            
+                <input type="hidden" id="playersPerShift" name="playersPerShift" value="3"> <!-- Hier wird der Standardwert auf 3 gesetzt -->
+                <button id="playersPerShift3" class="players-per-shift-button" onclick="setPlayersPerShift(3)">3</button>
+                <button id="playersPerShift4" class="players-per-shift-button" onclick="setPlayersPerShift(4)">4</button>
+            </div>         
             
             <a href="javascript:void(0);" id="nextButton">Next -></a>
+
         </div>
     </main>
 </body>
