@@ -56,17 +56,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // JavaScript-Funktion zum Festlegen der Anzahl der Spieler pro Schicht
+    // JavaScript-Funktion zum Festlegen der Anzahl der Spieler pro Schicht und zur Änderung der ausgewählten Klasse
     function setPlayersPerShift(value) {
+        const button3 = document.getElementById("playersPerShift3");
+        const button4 = document.getElementById("playersPerShift4");
+
+        if (value === 3) {
+            button3.classList.add("selected");
+            button4.classList.remove("selected");
+        } else {
+            button3.classList.remove("selected");
+            button4.classList.add("selected");
+        }
+
         localStorage.setItem('playersPerShift', value);
     }
 
     // Event-Listener für die Schaltflächen "3" und "4" Spieler pro Schicht
-    document.getElementById("button3").addEventListener("click", function () {
+    document.getElementById("playersPerShift3").addEventListener("click", function () {
         setPlayersPerShift(3);
     });
 
-    document.getElementById("button4").addEventListener("click", function () {
+    document.getElementById("playersPerShift4").addEventListener("click", function () {
         setPlayersPerShift(4);
     });
 });
