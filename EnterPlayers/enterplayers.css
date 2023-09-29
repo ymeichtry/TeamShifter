@@ -85,3 +85,8 @@ main {
   border-radius: 5px;
   font-size: 16px;
 }
+
+.selected {
+  background-color: #0074D9;
+  border-radius: 15%;
+}

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,12 +7,10 @@
     <link rel="stylesheet" href="enterplayers.css" />
     <script src="enterplayers.js" defer></script>
 </head>
-
 <body>
     <header>
         <iframe src="../Header/header.html" frameborder="0" class="header-iframe"></iframe>
     </header>
-
     <main>
         <div class="content">
             <p>Names of the players here:</p>
@@ -36,12 +33,14 @@
 
             <div class="players-per-shift">
                 <label for="playersPerShift">Players per Shift:</label>
-                <input type="number" id="playersPerShift" placeholder="Number of players" />
-            </div>            
+                <input type="hidden" id="playersPerShift" name="playersPerShift" value="3">
+                <button id="playersPerShift3" class="players-per-shift-button" onclick="setPlayersPerShift(3)">3</button>
+                <button id="playersPerShift4" class="players-per-shift-button" onclick="setPlayersPerShift(4)">4</button>
+            </div>       
             
             <a href="javascript:void(0);" id="nextButton">Next -></a>
+
         </div>
     </main>
 </body>
-
 </html>
