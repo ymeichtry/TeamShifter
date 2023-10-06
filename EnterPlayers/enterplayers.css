@@ -103,3 +103,38 @@ main {
   background-color: #0074D9;
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
 }
+
+#backButton, #nextButton {
+  display: inline-block;
+  background-color: #0074D9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+#backButton {
+  margin-right: 10px; 
+  float: left; 
+}
+
+#nextButton {
+  float: right; 
+}
+
+.back-next-button:hover {
+  background-color: #004080;
+}
+
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
