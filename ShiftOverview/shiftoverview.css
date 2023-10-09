@@ -2,7 +2,6 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   padding: 0;
-  background-color: #f0f0f0;
 }
 
 header {
@@ -59,4 +58,34 @@ h2 {
 
 #nextShiftButton:hover {
   background-color: #0056b3;
+}
+
+#backButton {
+  margin-right: 10px; 
+  float: left;
+}
+
+#backButton {
+  display: inline-block;
+  background-color: #0074D9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.back-next-button:hover {
+  background-color: #004080;
+}
+
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }

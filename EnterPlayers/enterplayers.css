@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  margin-bottom: 0px; 
 }
 
 header {
@@ -14,6 +15,14 @@ iframe {
 
 main {
   margin: 2%;
+  max-height: calc(116vh - 260px);
+  overflow-y: auto; 
+}
+
+.content p{
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 0;
 }
 
 .player-list {
@@ -21,6 +30,7 @@ main {
   padding: 0;
   width: 92%;
   margin-left: 2%;
+  margin-top: 8px;
 }
 
 .player-list li {
@@ -69,23 +79,23 @@ main {
 }
 
 .players-per-shift {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 
 .players-per-shift label {
   font-size: 18px;
   font-weight: bold;
-  margin-right: 10px; /* Fügt einen Abstand zwischen dem Label und den Schaltflächen hinzu */
+  margin-right: 10px; 
 }
 
 .players-per-shift input[type="number"] {
-  width: 60px; /* Verringert die Breite des Eingabefelds */
+  width: 60px; 
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
-  box-sizing: border-box; /* Berücksichtige das Padding in der Gesamtbreite */
+  box-sizing: border-box;
 }
 
 .players-per-shift-button {
@@ -114,7 +124,6 @@ main {
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
-  margin-top: 10px;
 }
 
 #backButton {
@@ -124,6 +133,7 @@ main {
 
 #nextButton {
   float: right; 
+  margin-right: 20px;
 }
 
 .back-next-button:hover {
@@ -134,7 +144,7 @@ footer {
   background-color: #f2f2f2;
   text-align: center;
   padding: 10px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
