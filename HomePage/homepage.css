@@ -22,17 +22,29 @@ iframe {
   width: 100%;
 }
 
-.btn {
-  display: inline-block;
+.content p {
+  margin-left: 10px;
+}
+
+.content div {
+  display: flex;
+  justify-content: center;
+}
+
+.create-game {
+  display: flex;
+  justify-content: center;
+  width: 180px;
+  margin-top: 10%;
   padding: 10px 20px;
   background-color: #0074d9;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 50px;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.create-game:hover {
   background-color: #0056b3;
 }
