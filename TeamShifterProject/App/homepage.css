@@ -1,0 +1,91 @@
+.app-header {
+  background-color: #0074D9;
+  color: #FFF;
+  padding: 0;
+  padding-top: 13px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 50px;
+  border: none;
+  margin: 0; 
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 24px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.app-header .home-link i {
+  font-size: 24px;
+}
+
+.app-header .logo img {
+  width: 50px;
+}
+
+.home-link {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 24px;
+  margin-right: 24px;
+  margin-left: 3%;
+  margin-bottom: 20px;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  height: 50px;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.content p {
+  margin-left: 10px;
+}
+
+.content div {
+  display: flex;
+  justify-content: center;
+}
+
+.create-game {
+  display: flex;
+  justify-content: center;
+  width: 180px;
+  margin-top: 10%;
+  padding: 10px 20px;
+  background-color: #0074d9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.create-game:hover {
+  background-color: #0056b3;
+}
