@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
         const shiftDiv = document.createElement("div");
         shiftsContainer.prepend(shiftDiv);
 
-        shiftDiv.classList.add("shift");
+        shiftDiv.classList.add("Shift");
 
         const title = document.createElement("h3");
-        title.textContent = `${currentShiftIndex + 1}. shift`;
+        title.textContent = `${currentShiftIndex + 1}. Shift`;
         shiftDiv.appendChild(title);
 
         const currentShiftData = [];
