@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let j = 0; j < playersPerShift; j++) {
             const player = document.createElement("p");
             currentShiftData.push(playerData[0]);
-            player.textContent = `${currentShiftData[j] || ''}`;
+            player.textContent = `${j + 1}. ${currentShiftData[j] || ''}`;
             shiftDiv.appendChild(player);
             playerData.push(playerData.shift()); // Verschieben des ersten Spielers ans Ende der Liste
         }
