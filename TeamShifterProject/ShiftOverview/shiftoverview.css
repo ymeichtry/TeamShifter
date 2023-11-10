@@ -47,6 +47,7 @@ h2 {
 #nextShiftButton {
   display: block;
   margin: 20px auto;
+  margin-bottom: 18%;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -54,6 +55,11 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999; /* Stelle sicher, dass der Button über dem Inhalt liegt */
 }
 
 #nextShiftButton:hover {
