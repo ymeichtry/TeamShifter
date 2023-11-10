@@ -12,17 +12,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to generate shifts
     function generateShifts() {
-        shiftsContainer.innerHTML = ''; // Clear the content of the container
+        const shiftDiv = document.createElement("div");
+        shiftsContainer.prepend(shiftDiv);
+
+        shiftDiv.classList.add("shift");
+
+        const title = document.createElement("h3");
+        title.textContent = `${currentShiftIndex + 1}. shift`;
+        shiftDiv.appendChild(title);
 
         const currentShiftData = [];
 
         for (let j = 0; j < playersPerShift; j++) {
             const player = document.createElement("p");
             currentShiftData.push(playerData[0]);
-            player.textContent = `${j + 1}. ${currentShiftData[j] || ''}`;
-            shiftsContainer.appendChild(player);
+            player.textContent = `${currentShiftData[j] || ''}`;
+            shiftDiv.appendChild(player);
             playerData.push(playerData.shift()); // Verschieben des ersten Spielers ans Ende der Liste
         }
+
+        currentShiftIndex++;
     }
 
     // Call the function to generate shifts initially
