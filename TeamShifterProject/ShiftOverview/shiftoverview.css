@@ -14,16 +14,14 @@ iframe {
 }
 
 main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 2%;
+  max-height: calc(116vh - 260px);
+  overflow-y: auto; 
 }
 
 .content {
   text-align: center;
+  margin-bottom: 10%;
 }
 
 h2 {
@@ -52,14 +50,14 @@ h2 {
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 45px;
   cursor: pointer;
   font-size: 16px;
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 999; /* Stelle sicher, dass der Button über dem Inhalt liegt */
+  z-index: 999;
 }
 
 #nextShiftButton:hover {
@@ -94,4 +92,19 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+.Shift {
+  position: relative;
+  padding: 10px;
+}
+
+.Shift h3 {
+  font-weight: normal;
+  font-size: 14px;
+  margin: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #1d1d1dac;
 }
