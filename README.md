@@ -64,7 +64,7 @@ Find the source code on [GitHub](https://github.com/ymeichtry/TeamShifter).
 ## Author
 
 Yanis Meichtry  
-[LinkedIn](https://www.linkedin.com/in/yanis-meichtry/)  
+[LinkedIn](https://www.linkedin.com/in/yanis-meichtry-4583b6273/)  
 [GitHub](https://github.com/ymeichtry)
 
 ## License
