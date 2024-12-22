@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding: 0;
+}
+
+header {
+  height: 50px;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  margin: 2%;
+  max-height: calc(116vh - 260px);
+  overflow-y: auto; 
+}
+
+.content {
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.shifts div {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.shifts p {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+#nextShiftButton {
+  display: block;
+  margin: 20px auto;
+  margin-bottom: 18%;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 45px;
+  cursor: pointer;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+#nextShiftButton:hover {
+  background-color: #0056b3;
+}
+
+#backButton {
+  margin-right: 10px; 
+  float: left;
+}
+
+#backButton {
+  display: inline-block;
+  background-color: #0074D9;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.back-next-button:hover {
+  background-color: #004080;
+}
+
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.Shift {
+  position: relative;
+  padding: 10px;
+}
+
+.Shift h3 {
+  font-weight: normal;
+  font-size: 14px;
+  margin: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #1d1d1dac;
+}
