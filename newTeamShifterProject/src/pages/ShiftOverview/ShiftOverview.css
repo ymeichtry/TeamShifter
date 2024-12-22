@@ -15,8 +15,9 @@ iframe {
 
 main {
   margin: 2%;
-  max-height: calc(116vh - 260px);
+  max-height: calc(100vh - 100px);
   overflow-y: auto; 
+  padding-bottom: 100px;
 }
 
 .content {
@@ -29,32 +30,44 @@ h2 {
   margin-bottom: 20px;
 }
 
+.shifts {
+  display: flex;
+  flex-direction: column;
+}
+
 .shifts div {
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
+  text-align: left;
 }
 
-.shifts p {
-  font-size: 18px;
-  margin: 8px 0;
+.shifts .Shift h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #555;
+}
+
+.shifts .Shift p {
+  font-size: 14px;
+  margin: 2px 0;
 }
 
 #nextShiftButton {
   display: block;
   margin: 20px auto;
-  margin-bottom: 18%;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 45px;
+  border-radius: 25px;
   cursor: pointer;
   font-size: 16px;
   position: fixed;
-  bottom: 0;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
@@ -65,11 +78,6 @@ h2 {
 }
 
 #backButton {
-  margin-right: 10px; 
-  float: left;
-}
-
-#backButton {
   display: inline-block;
   background-color: #0074D9;
   color: #fff;
@@ -77,12 +85,12 @@ h2 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   text-decoration: none;
+  margin: 10px;
 }
 
-.back-next-button:hover {
-  background-color: #004080;
+#backButton:hover {
+  background-color: #0056b3;
 }
 
 footer {
@@ -92,19 +100,4 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-}
-
-.Shift {
-  position: relative;
-  padding: 10px;
-}
-
-.Shift h3 {
-  font-weight: normal;
-  font-size: 14px;
-  margin: 5px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #1d1d1dac;
 }

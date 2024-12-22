@@ -38,7 +38,7 @@ const EnterPlayers = () => {
     const filteredData = playerData.filter((player) => player.trim() !== "");
     localStorage.setItem("playerData", JSON.stringify(filteredData));
     localStorage.setItem("playersPerShift", playersPerShift);
-    window.location.href = "../ShiftOverview/shiftoverview.html";
+    window.location.href = "/ShiftOverview";
   };
 
   const handleShiftChange = (value) => {
@@ -90,7 +90,7 @@ const EnterPlayers = () => {
         </div>
       </main>
       <footer>
-        <a href="../HomePage/homepage.html" id="backButton">
+        <a href="/" id="backButton">
           ← Back
         </a>
         <button id="nextButton" onClick={handleNext}>

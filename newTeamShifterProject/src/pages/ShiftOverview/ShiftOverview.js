@@ -40,12 +40,6 @@ const ShiftOverview = () => {
     setCurrentShiftIndex((prevIndex) => prevIndex + 1);
   };
 
-  // Generate the first shift when the component mounts
-  useEffect(() => {
-    generateShift();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [playerData]);
-
   return (
     <div>
       <Header />
@@ -70,7 +64,7 @@ const ShiftOverview = () => {
         </button>
       </main>
       <footer>
-        <a href="../EnterPlayers/enterplayers.html" id="backButton">
+        <a href="/EnterPlayers" id="backButton">
           ← Back
         </a>
       </footer>

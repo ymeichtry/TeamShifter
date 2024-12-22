@@ -10,7 +10,7 @@ const HomePage = () => {
         <div className="content">
           <p>Welcome to the HomePage of TeamShifter</p>
           <div>
-            <a href="../EnterPlayers/enterplayers.html" className="create-game">
+            <a href="/EnterPlayers" className="create-game">
               Create a new Game
             </a>
           </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import "./Header.css";
 
+import Logo from "../../images/TeamShifterLogoBlue.svg";
+
 const Header = () => {
   return (
     <div className="app-header">
@@ -9,7 +11,7 @@ const Header = () => {
       </a>
       <img
         className="logo"
-        src="/Images/TeamShifterLogoBlue.svg"
+        src={Logo}
         alt="TeamShifter Logo"
       />
     </div>

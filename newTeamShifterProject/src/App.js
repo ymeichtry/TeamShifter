@@ -18,8 +18,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/admin" element={<EnterPlayers />} />
-            <Route path="/pay" element={<ShiftOverview />} />
+            <Route path="/EnterPlayers" element={<EnterPlayers />} />
+            <Route path="/ShiftOverview" element={<ShiftOverview />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </main>

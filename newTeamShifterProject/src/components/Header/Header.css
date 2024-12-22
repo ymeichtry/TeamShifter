@@ -19,11 +19,12 @@ body {
 }
 
 .logo {
+    width: 20%;
     font-size: 24px;
     font-weight: bold;
     margin-left: 24px;
     margin-right: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .app-header .home-link i {
